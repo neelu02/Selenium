@@ -23,9 +23,9 @@ public class TC003 extends BaseTest {
 		String taskName=ExcelLibrary.getData(XL_PATH, sheetName, 1, 3);
 		String estimateHours=ExcelLibrary.getData(XL_PATH, sheetName, 1, 4).split("\\.")[0];
 		String day=ExcelLibrary.getData(XL_PATH, sheetName, 1, 5).split("\\.")[0];
-		String menuName1=ExcelLibrary.getData(XL_PATH, sheetName, 1, 6);
+		String menuLinkName=ExcelLibrary.getData(XL_PATH, sheetName, 1, 6);
 		
-		TimeTrackPage timeTrackPage=(TimeTrackPage)homePage.clickOnMenu(menuName1);
+		TimeTrackPage timeTrackPage=(TimeTrackPage)homePage.clickOnMenu(menuLinkName);
 		timeTrackPage.createNewTask(option, customerName, projectName,taskName, estimateHours, day);
 		Assert.assertEquals(timeTrackPage.isTaskDisplayed(taskName), true);
 		timeTrackPage.hoverOnTaskNameTimeSpentHideAndSaveChanges(taskName);
@@ -34,8 +34,8 @@ public class TC003 extends BaseTest {
 	
 	@AfterMethod(alwaysRun=true)
 	public void deleteCustomer() {
-		String menuName2=ExcelLibrary.getData(XL_PATH, sheetName, 1, 7);
-		TasksPage tasksPage = (TasksPage)homePage.clickOnMenu(menuName2);
+		String menuLinkName=ExcelLibrary.getData(XL_PATH, sheetName, 1, 7);
+		TasksPage tasksPage = (TasksPage)homePage.clickOnMenu(menuLinkName);
 		tasksPage.deleteCustomer(customerName);
 	}
 }
