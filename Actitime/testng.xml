@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="RegressionSuite" verbose="5">
+  <test thread-count="5" name="ChromeTest">
+  	<parameter name="appUrl" value="https://demo.actitime.com/reports/reports.do"></parameter>
+    <classes>
+      <class name="com.actimind.actitime.testcases.TC001"/>
+      <class name="com.actimind.actitime.testcases.TC002"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="FirefoxTest">
+  	<parameter name="appUrl" value="https://demo.actitime.com/reports/reports.do"></parameter>
+  	<parameter name="browserName" value="firefox"></parameter>
+    <classes>
+      <class name="com.actimind.actitime.testcases.TC001"/>
+      <class name="com.actimind.actitime.testcases.TC002"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
