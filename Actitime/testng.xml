@@ -8,12 +8,12 @@
       <!--<class name="com.actimind.actitime.testcases.TC002"/>-->
     </classes>
   </test> <!-- Test -->
-  <!--<test thread-count="5" name="FirefoxTest">
+  <!--<test thread-count="5" name="FirefoxTest"> 
   	<parameter name="appUrl" value="https://demo.actitime.com/reports/reports.do"></parameter>
   	<parameter name="browserName" value="firefox"></parameter>
     <classes>
       <class name="com.actimind.actitime.testcases.TC001"/>
       <class name="com.actimind.actitime.testcases.TC002"/>
     </classes>
-  </test> <!-- Test -->
+  </test> Test -->
 </suite> <!-- Suite -->
